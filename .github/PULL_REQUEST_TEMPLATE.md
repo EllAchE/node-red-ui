@@ -26,6 +26,7 @@ the [forum](https://discourse.nodered.org) or
 <!-- Describe the nature of this change. What problem does it address? -->
 
 ## Checklist
+
 <!-- Put an `x` in the boxes that apply -->
 
 - [ ] I have read the [contribution guidelines](https://github.com/node-red/node-red/blob/master/CONTRIBUTING.md)
