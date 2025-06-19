@@ -15,7 +15,8 @@
         "build": "grunt build",
         "dev": "grunt dev",
         "build-dev": "grunt build-dev",
-        "docs": "grunt docs"
+        "docs": "grunt docs",
+        "lint": "eslint ."
     },
     "contributors": [
         {
@@ -96,6 +97,7 @@
         "grunt-contrib-concat": "2.1.0",
         "grunt-contrib-copy": "1.0.0",
         "grunt-contrib-jshint": "3.2.0",
+        "eslint": "^8.56.0",
         "grunt-contrib-uglify": "5.2.2",
         "grunt-contrib-watch": "1.1.0",
         "grunt-jsdoc": "2.4.1",
