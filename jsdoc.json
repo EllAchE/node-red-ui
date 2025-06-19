@@ -1,25 +1,44 @@
 {
-    "opts": {
-        "template": "./node_modules/jsdoc-nr-template",
-        "destination": "./docs",
-        "recurse": true
-    },
-    "tags": {
-        "allowUnknownTags": false,
-        "dictionaries": ["jsdoc"]
-    },
-    "source": {
-        "_include": [
-            "./packages/node_modules/@node-red/runtime/lib/api"
-        ]
-    },
-    "templates": {
-        "systemName": "Node-RED Runtime API",
-        "footer": "",
-        "copyright": "Released under the Apache License v2.0",
-        "default": {
-            "outputSourceFiles": false
-        }
-    },
-    "plugins": ["plugins/markdown"]
+  "opts": {
+    "template": "./node_modules/jsdoc-nr-template",
+    "destination": "./docs",
+    "recurse": true,
+    "checkTypes": true,
+    "checkAnnotations": true
+  },
+  "tags": {
+    "allowUnknownTags": false,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "_include": [
+      "./packages/node_modules/@node-red/runtime/lib/api",
+      "./packages/node_modules/@node-red/runtime/lib",
+      "./packages/node_modules/@node-red/util",
+      "./packages/node_modules/@node-red/editor-api",
+      "./packages/node_modules/@node-red/registry",
+      "./packages/node_modules/@node-red/editor-client/src/js"
+    ]
+  },
+  "templates": {
+    "systemName": "Node-RED Runtime API",
+    "footer": "",
+    "copyright": "Released under the Apache License v2.0",
+    "default": {
+      "outputSourceFiles": false
+    }
+  },
+  "plugins": ["plugins/markdown", "plugins/checkTypes"],
+  "typecheck": {
+    "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": false,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "exactOptionalPropertyTypes": false
+  }
 }
